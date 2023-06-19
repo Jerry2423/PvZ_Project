@@ -1,0 +1,65 @@
+cmake_minimum_required(VERSION 3.16)
+
+add_library(
+  GameWorld
+  STATIC
+  GameWorld.hpp
+  GameWorld.cpp
+)
+
+target_link_libraries(
+  GameWorld
+  GameObject
+  PlantingSpot
+  Seed
+  SunFlowerSeed
+  PeashooterSeed
+  Pea
+  Peashooter
+  CooldownMask
+  Plant
+  SunFlower
+  FlowerSun
+  Shovel
+  Zombie
+  RegZombie
+  WallnutSeed
+  Wallnut
+  CherrySeed
+  Cherry
+  Explosion
+  RepeaterSeed
+  Repeater
+  BuckZombie
+  PoleVaultZombie
+)
+
+target_include_directories(
+  GameWorld
+  PUBLIC 
+  ${CMAKE_SOURCE_DIR}/src/
+  ${CMAKE_SOURCE_DIR}/src/Framework/
+  ${CMAKE_SOURCE_DIR}/src/GameObject/
+  ${CMAKE_SOURCE_DIR}/src/GameObject/PlantingSpot
+  ${CMAKE_SOURCE_DIR}/src/GameObject/Seed
+  ${CMAKE_SOURCE_DIR}/src/GameObject/SunFlowerSeed
+  ${CMAKE_SOURCE_DIR}/src/GameObject/PeashooterSeed
+  ${CMAKE_SOURCE_DIR}/src/GameObject/Pea
+  ${CMAKE_SOURCE_DIR}/src/GameObject/Peashooter
+  ${CMAKE_SOURCE_DIR}/src/GameObject/CooldownMask
+  ${CMAKE_SOURCE_DIR}/src/GameObject/FlowerSun
+  ${CMAKE_SOURCE_DIR}/src/GameObject/SunFlower
+  ${CMAKE_SOURCE_DIR}/src/GameObject/Plant
+  ${CMAKE_SOURCE_DIR}/src/GameObject/Shovel
+  ${CMAKE_SOURCE_DIR}/src/GameObject/Zombie
+  ${CMAKE_SOURCE_DIR}/src/GameObject/RegZombie
+  ${CMAKE_SOURCE_DIR}/src/GameObject/WallnutSeed
+  ${CMAKE_SOURCE_DIR}/src/GameObject/Wallnut
+  ${CMAKE_SOURCE_DIR}/src/GameObject/CherrySeed
+  ${CMAKE_SOURCE_DIR}/src/GameObject/Cherry
+  ${CMAKE_SOURCE_DIR}/src/GameObject/Exlosion
+  ${CMAKE_SOURCE_DIR}/src/GameObject/RepeaterSeed
+  ${CMAKE_SOURCE_DIR}/src/GameObject/Repeater
+  ${CMAKE_SOURCE_DIR}/src/GameObject/BuckZombie
+  ${CMAKE_SOURCE_DIR}/src/GameObject/PoleVaultZombie
+)
